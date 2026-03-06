@@ -22,15 +22,12 @@ class MainActivity : AppCompatActivity() {
 
         db = DatabaseHelper(this)
 
-        etId = findViewById(R.id.etId)
-        etName = findViewById(R.id.etName)
-        etEmail = findViewById(R.id.etEmail)
+        FindViewBYID()
+        Body()
 
-        btnInsert = findViewById(R.id.btnInsert)
-        btnView = findViewById(R.id.btnView)
-        btnUpdate = findViewById(R.id.btnUpdate)
-        btnDelete = findViewById(R.id.btnDelete)
+    }
 
+    private fun Body() {
         // INSERT
         btnInsert.setOnClickListener {
 
@@ -88,5 +85,16 @@ class MainActivity : AppCompatActivity() {
             else
                 Toast.makeText(this, "Data Not Found", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun FindViewBYID() {
+        etId = findViewById(R.id.etId)
+        etName = findViewById(R.id.etName)
+        etEmail = findViewById(R.id.etEmail)
+
+        btnInsert = findViewById(R.id.btnInsert)
+        btnView = findViewById(R.id.btnView)
+        btnUpdate = findViewById(R.id.btnUpdate)
+        btnDelete = findViewById(R.id.btnDelete)
     }
 }
